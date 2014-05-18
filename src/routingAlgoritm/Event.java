@@ -2,10 +2,10 @@ package routingAlgoritm;
 
 public class Event
 {
-
-	public Event(int time, int id, Position position)
+	
+	public Event(int time, int id, Position position, int direction, int distance)
 	{
-		// TODO Auto-generated constructor stub
+		
 	}
 
 }

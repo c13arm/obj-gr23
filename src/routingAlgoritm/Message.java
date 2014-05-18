@@ -2,6 +2,16 @@ package routingAlgoritm;
 
 public class Message
 {
+	private int type;
+	private int sendDirection;
+	
+	
+	public Message(int type)
+	{
+		this.type = type;
+		
+		
+	}
 
 	public void update()
 	{
@@ -16,14 +26,12 @@ public class Message
 
 	public int getType()
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		return type;
 	}
 
 	public int getSendDirection()
 	{
-		// TODO Auto-generated method stub
-		return 0;
+		return sendDirection;
 	}
 
 }

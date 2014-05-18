@@ -66,7 +66,7 @@ public class Environment
 				
 				if(isRequestNode(nodes[j][i]) && time%400 == 0 && currentId>0)
 				{
-					nodes[j][i].sendRequest(id);
+					nodes[j][i].createRequest(id);
 					System.out.println("RequestNode at:" + j+"," + i+" with id:"+id);
 				}
 				receiveMessage(nodes[j][i]);
@@ -146,7 +146,7 @@ public class Environment
 	{
 		if(!node.hasReceivedMessage())
 		{
-			node.forwardMessage();
+			node.sendMessage();
 		}
 	}
 	/**
