@@ -1,6 +1,6 @@
 package routingAlgoritm;
 
-public class Message
+public abstract class Message
 {
 	private int type;
 	private int sendDirection;
@@ -9,29 +9,25 @@ public class Message
 	public Message(int type)
 	{
 		this.type = type;
-		
-		
-	}
-
-	public void update()
-	{
-		// TODO Auto-generated method stub
-		
 	}
 	
-	public void setSenddirection(int random)
+
+	public abstract void update();
+	
+	public void setSendDirection(int sendDirection)
 	{
-		// TODO Auto-generated method stub
+		this.sendDirection = sendDirection;
 	}
 
 	public int getType()
 	{
 		return type;
 	}
-
+	
 	public int getSendDirection()
 	{
 		return sendDirection;
 	}
+	
 
 }
