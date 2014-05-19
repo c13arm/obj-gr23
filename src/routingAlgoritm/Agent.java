@@ -1,24 +1,31 @@
 package routingAlgoritm;
+import java.util.ArrayList;
 
 public class Agent extends Message
 {
+	private int maxNrOfJumps = 50;
+	private	int nrOfJumps = 0;
+	private ArrayList<Event> event = new ArrayList<Event>();
+	private ArrayList<Position> visited = new ArrayList<Position>();
+	
 	public Agent()
 	{
 		super(1);
-		
-		
 	}
 	
-	public void setvisitedposition(Position position)
+	public void update()
 	{
-		// TODO Auto-generated method stub
-		
+		nrOfJumps++;
 	}
 
-	public void setSenddirection(int random)
+	public void setVisited(Position p)
 	{
-		// TODO Auto-generated method stub
-		
+		visited.add(p);
+	}
+	
+	public ArrayList<Position> getVisitedList()
+	{
+		return visited;
 	}
 
 }
