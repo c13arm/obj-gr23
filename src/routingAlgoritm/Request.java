@@ -7,7 +7,6 @@ public class Request extends Message
 	private int id;
 	private int maxNrOfJumps = 45;
 	private int nrOfJumps = 0;
-	private boolean knowRoute;
 	
 	public Request(int id)
 	{
@@ -15,7 +14,7 @@ public class Request extends Message
 		this.id = id;
 	}
 	
-	public void update()
+	public void updateNrOfJumps()
 	{
 		nrOfJumps++;
 	}
@@ -33,5 +32,13 @@ public class Request extends Message
 	public int getId()
 	{
 		return id;
+	}
+	
+	public boolean jumpsLeft()
+	{
+		if (nrOfJumps <= maxNrOfJumps)
+			return true;
+		else
+			return false;
 	}
 }
