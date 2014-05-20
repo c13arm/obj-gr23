@@ -15,7 +15,7 @@ public abstract class Message
 		return type;
 	}
 	
-	public abstract void update();
+	public abstract void updateNrOfJumps();
 	
 	public int getSendDirection()
 	{
